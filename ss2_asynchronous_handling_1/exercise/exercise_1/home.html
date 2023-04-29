@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm giờ Time Countdown</title>
+</head>
+
+<input type="number" id="time">
+<button onclick="countDown(document.getElementById('time').value)">Count Down</button>
+<p id="message"></p>
+<script !src="">
+    // function countDown(time) {
+    //     // setTimeout(() => {
+    //     //     document.write("counter finished")
+    //     //     document.getElementById("message").innerText =
+    //     // }, time * 1000)
+    //
+    //     let interval = setInterval(() => {
+    //         document.getElementById("message").innerText = time;
+    //         if(time-- === 0) {
+    //             clearInterval(interval);
+    //             document.getElementById("message").innerText = 'counter finished';
+    //         }
+    //     }, 1000)
+    // }
+
+    function sleep(ms) {
+        return new Promise((resolve, reject) => setTimeout(resolve, ms))
+    }
+
+    async function countDown(time) {
+        while (time > 0) {
+            document.getElementById("message").innerText = time;
+            time--;
+            await sleep(1000);
+        }
+
+        document.getElementById("message").innerText = 'counter finished';
+    }
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+</head>
+<body>
+<script>
+    async function getJSONAsync() {
+        let json = await axios.get('http://jsonplaceholder.typicode.com/posts/1');
+        return json.data;
+    }
+
+    (async () => {
+        let data = await getJSONAsync();
+        console.log(data)
+    })();
+</script>
+</body>
+</html>
