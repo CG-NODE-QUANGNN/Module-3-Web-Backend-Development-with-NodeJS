@@ -1,0 +1,8 @@
+{
+  "name": "Module-3-Web-Backend-Development-with-NodeJS",
+  "version": "1.0.0",
+  "dependencies": {
+    "formidable": "^2.1.1",
+    "qs": "^6.11.1"
+  }
+}
